@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
@@ -10,9 +14,6 @@ body {
   color: #949494;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 @media screen and (max-width: 767px) {
   // .card-container > *:not(.circle-link) ,
