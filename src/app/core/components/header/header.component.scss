@@ -1,0 +1,11 @@
+.header {
+  background-color: green;
+  padding: 1.5em 1em;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: relative;
+
+  &__title {
+    margin: 0;
+  }
+}
