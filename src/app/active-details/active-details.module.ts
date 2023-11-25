@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActiveDetailsComponent } from './containers/active-details/active-details.component';
 import { ActiveDetailsGraphicComponent } from './components/active-details-graphic/active-details-graphic.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ActiveDetailsRoutingModule } from './active-details-routing.module';
+import { ActiveDetailsService } from './service/active-details.service';
 
 @NgModule({
   declarations: [
@@ -9,10 +12,10 @@ import { ActiveDetailsGraphicComponent } from './components/active-details-graph
     ActiveDetailsGraphicComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ActiveDetailsRoutingModule,
+    HttpClientModule
   ],
-  providers: [
-    ActiveDetailsComponent
-  ]
+  providers: [ActiveDetailsService]
 })
 export class ActiveDetailsModule { }
