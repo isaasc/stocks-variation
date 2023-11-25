@@ -8,7 +8,7 @@ import { Chart } from '../models/Chart.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class ActiveDetailsService {
+export class GoodsDetailsService {
   private readonly corsHeroku: string = 'https://cors-anywhere.herokuapp.com';
   private readonly urlApi: string = environment.apiBaseUrl;
 
@@ -18,8 +18,8 @@ export class ActiveDetailsService {
     return this.http.get<Chart>(`${this.corsHeroku}/${this.urlApi}/v8/finance/chart/${activeCode}`)
   }
 
-  getResult(activeCode: string): Observable<Result[]> {
+  getResult(activeCode: string): Observable<Result> {
     return this.getChart(activeCode)
-      .pipe(map(chart => chart.result));
+      .pipe(map(chart => chart.result[0]));
   }
 }
