@@ -1,5 +1,5 @@
-import { Meta } from "@angular/platform-browser";
 import { Indicator } from "./Indicator.interface";
+import { Meta } from './Meta.interface';
 
 export interface Result {
   meta: Meta;
