@@ -5,11 +5,13 @@ import { GoodsDetailsChartComponent } from './components/goods-details-chart/goo
 import { HttpClientModule } from '@angular/common/http';
 import { GoodsDetailsRoutingModule } from './goods-details-routing.module';
 import { GoodsDetailsService } from './service/goods-details.service';
+import { GoodsDetailsHeaderComponent } from './components/goods-details-header/goods-details-header.component';
 
 @NgModule({
   declarations: [
     GoodsDetailsComponent,
-    GoodsDetailsChartComponent
+    GoodsDetailsChartComponent,
+    GoodsDetailsHeaderComponent
   ],
   imports: [
     CommonModule,
