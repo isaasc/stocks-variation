@@ -1,11 +1,18 @@
 .header {
-  background-color: green;
+  background-color: #133A3B;
   padding: 1.5em 1em;
   color: #FFF;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 30%;
+  }
 
   &__title {
     margin: 0;
+    font-size: 24px;
   }
 }
