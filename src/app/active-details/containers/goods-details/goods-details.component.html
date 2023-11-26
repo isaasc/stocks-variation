@@ -1,7 +1,7 @@
-<p>active-details works! mas não está :O</p>
-<ng-container *ngIf="(test$ | async) as user; else block">
-  {{user.chart.result[0].meta.currency }}
-  <app-goods-details-chart></app-goods-details-chart>
+<ng-container *ngIf="(chartResult$ | async) as chartResult; else block">
+  <app-goods-details-header [goods]="chartResult.meta"></app-goods-details-header>
+  <app-goods-details-chart [goods]="chartResult"></app-goods-details-chart>
 </ng-container>
 
-<ng-template #block></ng-template>
+<ng-template #block>
+</ng-template>
