@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, catchError, map, throwError } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Result } from '../models/Result.interface';
 import { ChartResponse } from '../models/ChartResponse.interface';
 
@@ -9,9 +8,7 @@ import { ChartResponse } from '../models/ChartResponse.interface';
   providedIn: 'root'
 })
 export class GoodsDetailsService {
-  private readonly corsHeroku: string = 'https://cors-anywhere.herokuapp.com';
   private readonly corsDomain = 'finance.yahoo.com';
-  private readonly urlApi: string = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -23,9 +20,9 @@ export class GoodsDetailsService {
     .set('useYfid', 'true')
     .set('interval', interval)
     .set('includedPrePost', 'true')
-    .set('corsDomain', this.corsDomain)
+    .set('corsDomain', this.corsDomain);
 
-    const url: string = `${this.corsHeroku}/${this.urlApi}/v8/finance/chart/${symbol}`;
+    const url: string = `/api/v8/finance/chart/${symbol}`;
 
     return this.http.get<ChartResponse>(url, { params }).pipe(
       catchError(this.handleError)
