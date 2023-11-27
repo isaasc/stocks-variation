@@ -10,36 +10,40 @@ Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.
 
 ## Instalação:
 
-1. Clone o repositório
+1. **Clone o repositório**
 
 ```
   git clone https://github.com/isaasc/stocks-variation.git
 ```
 
-2. Navegue até a pasta do projeto
+2. **Navegue até a pasta do projeto**
 
 ```
   cd stocks-variation
 ```
 
-3. Instale as dependências
+3. **Instale as dependências**
 
 ```
   npm install
 ```
 
-4. Acesse essa [url](https://cors-anywhere.herokuapp.com/corsdemo) e clique no botão "Request temporary access to the demo server"
-
-5. Execute o comando abaixo para iniciar a aplicação:
+4. **Execute o comando abaixo para iniciar a aplicação**
 
 ```
-npm start
+  npm start
 ```
 
-5. Navegue até `http://localhost:4200/`
+5. **Navegue até a url abaixo e seja feliz**
+
+```
+  `http://localhost:4200/`
+```
 
 ## Rodando os testes
 
 ```
   ng test
 ```
+
+### Made By: [Isabella Campos](https://www.linkedin.com/in/isabellaszcampos/)
