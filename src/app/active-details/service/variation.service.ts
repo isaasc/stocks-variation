@@ -15,8 +15,8 @@ export class VariationService {
     dailyVariations.push(0);
 
     for (let i = 1; i < openPrices.length; i++) {
-      const variation: number = this.numberUtility.calculatePercentageChange(openPrices[i - 1], openPrices[i]);
-      dailyVariations.push(Number(variation.toFixed(2)));
+      const variation: number = this.numberUtility.calculatePercentageChange(openPrices[i - 1], openPrices[i], 2);
+      dailyVariations.push(variation);
     }
 
     return dailyVariations;
@@ -34,8 +34,9 @@ export class VariationService {
     variationsFromFirstDate.push(0);
 
     for (let i = 1; i < openPrices.length; i++) {
-      const variation: number = this.numberUtility.calculatePercentageChange(initialValue, openPrices[i]);
-      variationsFromFirstDate.push(Number(variation.toFixed(2)));
+      const variation: number = this.numberUtility.calculatePercentageChange(initialValue, openPrices[i], 2);
+      // variationsFromFirstDate.push(Number(variation.toFixed(2)));
+      variationsFromFirstDate.push(variation);
     }
 
     return variationsFromFirstDate;
