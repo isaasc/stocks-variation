@@ -6,7 +6,6 @@ import { GoodsDetailsService } from './service/goods-details.service';
 import { GoodsDetailsHeaderComponent } from './components/goods-details-header/goods-details-header.component';
 import { VariationService } from './service/variation.service';
 import { SharedModule } from '../shared/shared.module';
-import { ChartService } from '../shared/chart.service';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

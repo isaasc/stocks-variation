@@ -8,7 +8,6 @@ describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent, HeaderComponent, FooterComponent],
