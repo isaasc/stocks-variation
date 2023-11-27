@@ -3,12 +3,14 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { Result } from '../models/Result.interface';
 import { ChartResponse } from '../models/ChartResponse.interface';
+import { environment } from 'src/environments/environments.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoodsDetailsService {
   private readonly corsDomain = 'finance.yahoo.com';
+  private readonly urlApi = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +24,7 @@ export class GoodsDetailsService {
     .set('includedPrePost', 'true')
     .set('corsDomain', this.corsDomain);
 
-    const url: string = `/api/v8/finance/chart/${symbol}`;
+    const url: string = `${this.urlApi}/chart/${symbol}`;
 
     return this.http.get<ChartResponse>(url, { params }).pipe(
       catchError(this.handleError)
