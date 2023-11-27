@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import { Result } from '../../models/Result.interface';
-import { Indicator } from '../../models/Indicator.interface';
 import { ChartService } from 'src/app/shared/chart.service';
 
 @Component({
@@ -23,10 +22,4 @@ export class GoodsDetailsChartComponent implements OnChanges {
     const chartConfig = this.chartService.createChartPriceVariationWithDailyVariationAndVariationFromFirstDate(chart);
     this.chartService.renderChart(this.canvas.nativeElement, chartConfig);
   }
-
-  parseOpenPricesToNumbersWithTwoDecimalPlaces(indicators: Indicator): number[] {
-    return indicators.quote[0].open.map((open: string) => Number(Number(open).toFixed(2)));
-  }
-
-
 }
