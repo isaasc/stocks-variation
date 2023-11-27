@@ -1,27 +1,52 @@
-# VariacaoAtivos
+# Stocks Variation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Este projeto consiste em demonstrar a variação do preço do ativo PETR4.SA nos últimos 30 pregões, apresentando também, o percentual de variação de preço de um dia para o outro e o percentual desde o primeiro pregão apresentado através de um gráfico.
 
-## Development server
+## Tecnologias usadas:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+- Angular 16.0.0
+- Chart.js ^4.4.0
+
+## Para rodar:
+
+1. Clone o repositório
+
+````
+git clone https://github.com/isaasc/stocks-variation.git
+```
+
+2. Entre no projeto:
+````
+
+cd stocks-variation
+
+```
+
+3. Baixe as dependências:
+```
+
+npm install
+
+```
+
+4. Acesse essa [url](https://cors-anywhere.herokuapp.com/corsdemo) e clique no botão "Request temporary access to the demo server":
+
+5. Execute o comando:
+```
+
+npm start
+
+```
+
+5. Navegue até `http://localhost:4200/`
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
