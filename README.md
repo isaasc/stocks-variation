@@ -1,6 +1,6 @@
 # Stocks Variation
 
-Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.SA nos últimos 30 pregões, apresentando também, o percentual de variação de preço de um dia para o outro e o percentual desde o primeiro pregão apresentado através de um gráfico.
+Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.SA através de um gráfico dos últimos 30 pregões, apresentando também, o percentual de variação de preço de um dia para o outro e o percentual desde o primeiro pregão.
 
 ## Tecnologias usadas:
 
@@ -28,7 +28,7 @@ Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.
   npm install
 ```
 
-4. **Execute o comando abaixo para iniciar a aplicação**
+4. **Inicie a aplicação**
 
 ```
   npm start
