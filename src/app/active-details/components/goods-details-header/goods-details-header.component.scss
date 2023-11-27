@@ -1,9 +1,9 @@
-h1 {
+.title {
   font-size: 16px;
-  color: #133A3B;
-}
+  color: #133b31;
 
-h3 {
-  font-size: 18px;
-  color: #133A3B;
+  &--principal {
+    font-size: 24px;
+    color: #133A3B;
+  }
 }

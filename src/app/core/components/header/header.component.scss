@@ -1,6 +1,7 @@
 .header {
   background-color: #133A3B;
-  padding: 1.5em 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   color: #FFF;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   display: flex;
@@ -8,10 +9,24 @@
   align-items: center;
 
   &__logo {
-    width: 30%;
+    width: 26%;
   }
 
-  &__title {
-    font-size: 24px;
+  @media screen and (min-width: 768px) {
+    &__logo {
+      width: 20%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__logo {
+      width: 16%;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__logo {
+      width: 10%;
+    }
   }
 }
