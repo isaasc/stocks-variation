@@ -1,7 +1,7 @@
-<ng-container *ngIf="(chartResult$ | async) as chartResult; else block">
+<ng-container *ngIf="(chartResult$ | async) as chartResult; else loadingIndicator">
   <app-goods-details-header [goods]="chartResult.meta"></app-goods-details-header>
   <app-goods-details-chart [goods]="chartResult"></app-goods-details-chart>
 </ng-container>
 
-<ng-template #block>
+<ng-template #loadingIndicator>
 </ng-template>

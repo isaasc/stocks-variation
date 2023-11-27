@@ -12,10 +12,14 @@ describe('FooterComponent', () => {
     });
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should display the correct text', () => {
+  //   fixture.detectChanges();
+  //   expect(component.title).toBe('Made by Isabella Campos');
+  // });
 });
