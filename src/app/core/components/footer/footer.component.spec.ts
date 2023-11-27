@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -8,18 +7,23 @@ describe('FooterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponent]
+      declarations: [FooterComponent],
     });
+
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should display the correct text', () => {
-  //   fixture.detectChanges();
-  //   expect(component.title).toBe('Made by Isabella Campos');
-  // });
+  it('should display the author name in the address element', () => {
+    fixture.detectChanges();
+
+    const compiled: HTMLElement = fixture.nativeElement;
+    const addressElement: HTMLElement | null = compiled.querySelector('.footer__title');
+
+    expect(addressElement!.textContent).toContain('Made by Isabella Campos');
+  });
 });
