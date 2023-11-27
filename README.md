@@ -6,6 +6,7 @@ Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.
 
 - Angular 16
 - Chart.js ^4.4.0
+- Date-fns 2.30.0
 
 ## Instalação:
 
