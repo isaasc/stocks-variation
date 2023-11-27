@@ -37,7 +37,7 @@ Este projeto tem como objetivo demonstrar a variação do preço do ativo PETR4.
 5. **Navegue até a url abaixo e seja feliz**
 
 ```
-  `http://localhost:4200/`
+  http://localhost:4200/
 ```
 
 ## Rodando os testes
