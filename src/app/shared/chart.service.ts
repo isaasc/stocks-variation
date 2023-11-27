@@ -21,28 +21,26 @@ export class ChartService {
           label: 'Open',
           data: chart.indicators.quote[0].open.map((open: string) => Number(this.numberUtility.formatNumber(Number(open), 2))),
           borderColor:'#133A3B',
-          backgroundColor:'#133A3B80',
-          fill: false,
+          backgroundColor:'#133A3B40',
+          fill: 'start',
           borderWidth: 2,
-          order: 0
+          order: 2
         },
         {
           label: 'Variação D-1',
           data: this.variationService.calculateDailyVariation(chart.indicators),
           borderColor: '#f2c110',
           backgroundColor: '#f2c11080',
-          fill: false,
-          order: 1,
+          order: 0,
           borderDash: [5, 5],
           type: 'line',
         },
         {
           label: 'Variação primeira data',
           data: this.variationService.calculateVariationFromFirstDate(chart.indicators),
-          order: 2,
+          order: 1,
           borderColor: '#5a189a',
           backgroundColor: '#5a189a80',
-          fill: false,
           borderDash: [5, 5],
           type: 'line',
         }]
